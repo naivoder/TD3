@@ -32,7 +32,7 @@ python main.py --env 'LunarLanderContinuous-v2'
         </td>
         <td>
             <p><b>Pendulum-v1</b></p>
-            <img src="environments/Pendulum-v1" width="250" height="250"/>
+            <img src="environments/Pendulum-v1.gif" width="250" height="250"/>
         </td>
         <td>
             <p><b>MountainCarContinuous-v0</b></p>
