@@ -2,6 +2,8 @@
 
 ## Overview
 
+This repository contains a PyTorch implementation of Twin Delayed Deep Deterministic Policy Gradients (TD3), a reinforcement learning algorithm that addresses some of the key challenges associated with continuous control tasks. The TD3 algorithm builds on the foundation of Deep Deterministic Policy Gradients (DDPG) by introducing several improvements to enhance stability and performance. One of the primary motivations behind TD3 is to mitigate the overestimation bias in Q-learning, which can lead to suboptimal policies. To achieve this, the authors proposed using a pair of critic networks to provide more accurate Q-value estimates. Additionally, TD3 employs a delayed policy update strategy, which reduces the variance in policy updates and helps in achieving more robust learning. Finally, the introduction of target policy smoothing adds noise to the target action, which reduces the likelihood of policy exploitation due to function approximation errors.  
+
 🚧 🛠️👷‍♀️ 🛑 Under construction...
 
 ## Setup
@@ -21,37 +23,42 @@ You can run the algorithm on any supported Gymnasium environment. For example:
 ```bash
 python main.py --env 'LunarLanderContinuous-v2'
 ```
-<!-- 
----
 
 <table>
     <tr>
         <td>
-            <p><b>CartPole-v1</b></p>
-            <img src="environments/CartPole-v1.gif" width="250" height="250"/>
+            <p><b>LunarLanderContinuous-v2</b></p>
+            <img src="environments/LunarLanderContinuous-v2.gif" width="250" height="250"/>
         </td>
         <td>
-            <p><b>MountainCar-v0</b></p>
-            <img src="environments/MountainCar-v0.gif" width="250" height="250"/>
+            <p><b>Pendulum-v1</b></p>
+            <img src="environments/Pendulum-v1" width="250" height="250"/>
         </td>
         <td>
-            <p><b>Acrobot-v1</b></p>
-            <img src="environments/Acrobot-v1.gif" width="250" height="250"/>
+            <p><b>MountainCarContinuous-v0</b></p>
+            <img src="environments/MountainCarContinuous-v0.gif" width="250" height="250"/>
+        </td>
+        <td>
+            <p><b>BipedalWalker-v3</b></p>
+            <img src="environments/BipedalWalker-v3.gif" width="250" height="250"/>
         </td>
     </tr>
     <tr>
         <td>
-            <img src="metrics/CartPole-v1_running_avg.png" width="250" height="250"/>
+            <img src="metrics/LunarLanderContinuous-v2_running_avg.png" width="250" height="250"/>
         </td>
         <td>
-            <img src="metrics/MountainCar-v0_running_avg.png" width="250" height="250"/>
+            <img src="metrics/Pendulum-v1_running_avg.png" width="250" height="250"/>
         </td>
         <td>
-            <img src="metrics/Acrobot-v1_running_avg.png" width="250" height="250"/>
+            <img src="metrics/MountainCarContinuous-v0_running_avg.png" width="250" height="250"/>
+        </td>
+        <td>
+            <img src="metrics/BipedalWalker-v3_running_avg.png" width="250" height="250"/>
         </td>
     </tr>
 </table>
-<table>
+<!-- <table>
     <tr>
         <td>
             <p><b>LundarLander-v2</b></p>
@@ -158,13 +165,7 @@ python main.py --env 'LunarLanderContinuous-v2'
             <img src="metrics/Tetris-v5_running_avg.png" width="250" height="250"/>
         </td>
     </tr>
-</table>
-
-It's very interesting that PPO struggles to solve the MountainCar environment (solved easily by DDPG). I found this comment from `/u/jurniss` on Reddit very insightful:
-
-> Sparse rewards. In OpenAI Gym MountainCar you only get a positive reward when  you reach the top. PPO is an on-policy algorithm. It performs a policy gradient update after each episode and throws the data away. Reaching the goal in MountainCar by random actions is a pretty rare event. When it finally happens, it's very unlikely that a single policy gradient update will be enough to start reaching the goal consistently, so PPO gets stuck again with no learning signal until it reaches the goal again by chance. On the other hand, DDPG stores this event in the replay buffer so it does not forget. The TD bootstrapping of the Q function will eventually propagate the reward from the goal backwards into the Q estimate for other states near the goal This is a big advantage of off-policy RL algorithms. Also DDPG uses an Ornstein-Uhlenbeck process for time-correlated exploration, whereas PPO samples Gaussian noise. The Ornstein-Uhlenbeck process is more likely to generate useful exploratory actions. (The exploration methods are not immutable properties of the algorithms, just the Baselines implementations.)
-
---- -->
+</table> -->
 
 ## Acknowledgements
 

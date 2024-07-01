@@ -1,8 +1,8 @@
 .DS_Store
 *.pt
 weights/
-environments/
-metrics/
+# environments/
+# metrics/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
