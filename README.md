@@ -38,10 +38,6 @@ python main.py --env 'LunarLanderContinuous-v2'
             <p><b>MountainCarContinuous-v0</b></p>
             <img src="environments/MountainCarContinuous-v0.gif" width="250" height="250"/>
         </td>
-        <td>
-            <p><b>BipedalWalker-v3</b></p>
-            <img src="environments/BipedalWalker-v3.gif" width="250" height="250"/>
-        </td>
     </tr>
     <tr>
         <td>
@@ -53,39 +49,36 @@ python main.py --env 'LunarLanderContinuous-v2'
         <td>
             <img src="metrics/MountainCarContinuous-v0_running_avg.png" width="250" height="250"/>
         </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <p><b>Pusher-v4</b></p>
+            <img src="environments/Pusher-v4.gif" width="250" height="250"/>
+        </td>
+        <td>
+            <p><b>Reacher-v4</b></p>
+            <img src="environments/Reacher-v4.gif" width="250" height="250"/>
+        </td>
+        <td>
+            <p><b>BipedalWalker-v3</b></p>
+            <img src="environments/BipedalWalker-v3.gif" width="250" height="250"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="metrics/Pusher-v4_running_avg.png" width="250" height="250"/>
+        </td>
+        <td>
+            <img src="metrics/Reacher-v4_running_avg.png" width="250" height="250"/>
+        </td>
         <td>
             <img src="metrics/BipedalWalker-v3_running_avg.png" width="250" height="250"/>
         </td>
     </tr>
 </table>
 <!-- <table>
-    <tr>
-        <td>
-            <p><b>LundarLander-v2</b></p>
-            <img src="environments/LundarLander-v2.gif" width="250" height="250"/>
-        </td>
-        <td>
-            <p><b>Asteroids-v5</b></p>
-            <img src="environments/Asteroids-v5.gif" width="250" height="250"/>
-        </td>
-        <td>
-            <p><b>Breakout-v5</b></p>
-            <img src="environments/Breakout-v5.gif" width="250" height="250"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img src="metrics/LundarLander-v2_running_avg.png" width="250" height="250"/>
-        </td>
-        <td>
-            <img src="metrics/Asteroids-v5_running_avg.png" width="250" height="250"/>
-        </td>
-        <td>
-            <img src="metrics/Breakout-v5_running_avg.png" width="250" height="250"/>
-        </td>
-    </tr>
-</table>
-<table>
     <tr>
         <td>
             <p><b>BeamRider-v5</b></p>
