@@ -5,6 +5,9 @@
 This repository contains a PyTorch implementation of Twin Delayed Deep Deterministic Policy Gradients (TD3), a reinforcement learning algorithm that addresses some of the key challenges associated with continuous control tasks. The TD3 algorithm builds on the foundation of Deep Deterministic Policy Gradients (DDPG) by introducing several improvements to enhance stability and performance. One of the primary motivations behind TD3 is to mitigate the overestimation bias in Q-learning, which can lead to suboptimal policies. To achieve this, the authors proposed using a pair of critic networks to provide more accurate Q-value estimates. Additionally, TD3 employs a delayed policy update strategy, which reduces the variance in policy updates and helps in achieving more robust learning. Finally, the introduction of target policy smoothing adds noise to the target action, which reduces the likelihood of policy exploitation due to function approximation errors.  
 
 
+🤔 it kinds seems like the catastrophic drops in average score are occuring at regular intervals... could this be a function of the parameter updates?  
+I'm also not convinced I'm handling the action's correctly for envs with action bounds | x | > 1. 
+
 ## Setup
 
 ### Required Dependencies

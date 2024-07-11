@@ -96,6 +96,9 @@ class TD3Agent(torch.nn.Module):
         mu += torch.randn(mu.size()).to(self.actor.device) * self.noise
 
         # clamp noise to action space
+        #
+        # wait... the actor net will produce values -1, 1 due to tanh, so wouldn't 
+        # I need to first multiply the action by the action max before adding noise?
         action_min = torch.tensor(self.action_low_bounds).to(self.actor.device)
         action_max = torch.tensor(self.action_high_bounds).to(self.actor.device)
         mu = torch.clamp(mu, action_min, action_max)
